@@ -41,7 +41,8 @@ public class SwiftModalWebVC: UINavigationController {
     }
     
     public init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue, dismissButtonStyle: SwiftModalWebVCDismissButtonStyle = .arrow, sharingEnabled: Bool = true) {
-        webViewController = SwiftWebVC(aRequest: request)
+        let webViewController = SwiftWebVC(aRequest: request)
+        self.webViewController = webViewController
         webViewController.sharingEnabled = sharingEnabled
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
         
