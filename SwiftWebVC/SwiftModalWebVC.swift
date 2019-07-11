@@ -16,10 +16,9 @@ public class SwiftModalWebVC: UINavigationController {
     public enum SwiftModalWebVCDismissButtonStyle {
         case arrow, cross
     }
-    
-    weak var webViewDelegate: UIWebViewDelegate? = nil
-    weak var webViewController: SwiftWebVC? = nil
-    
+
+    public weak var webViewController: SwiftWebVC? = nil
+
     public convenience init(urlString: String, sharingEnabled: Bool = true) {
         var urlString = urlString
         if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
